@@ -32,7 +32,8 @@ def fab_authenticate_spn(
         )
 
     #run_fab_command("config set fab_encryption_fallback_enabled true")
-
+    run_fab_command("config set encryption_fallback_enabled true")
+    
     run_fab_command(
         f"auth login -u {client_id} -p {client_secret} --tenant {tenant_id}",
         include_secrets=True,
